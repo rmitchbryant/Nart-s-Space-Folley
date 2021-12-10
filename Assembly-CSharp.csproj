@@ -97,11 +97,16 @@
     <Compile Include="Assets\Scripts\RangeEnemyTargeting.cs" />
     <Compile Include="Assets\Scripts\ReloadText.cs" />
     <Compile Include="Assets\Scripts\ShieldAppear.cs" />
+    <Compile Include="Assets\Scripts\ShipItemsDisplay.cs" />
+    <Compile Include="Assets\Scripts\ShipItemsPart1.cs" />
+    <Compile Include="Assets\Scripts\ShipItemsPart2.cs" />
+    <Compile Include="Assets\Scripts\ShipItemsPickup.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\SpawnEnemyMessage.cs" />
     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\SpinningObject.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
+    <Compile Include="Assets\Scripts\ToNextLevel.cs" />
     <Compile Include="Assets\Scripts\VictoryScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -734,6 +739,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

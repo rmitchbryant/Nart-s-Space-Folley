@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script handles the Melee Enemy attacks
+// This one is currently not in use
+
 public class EnemyAttack : MonoBehaviour
 {
     public float damageDelay;
@@ -16,6 +19,7 @@ public class EnemyAttack : MonoBehaviour
         StartCoroutine(Hit());
     }
 
+    // Play the animation, but with a delay so it looks like the attack does damage when it lands
     IEnumerator Hit()
     {
         Debug.Log("Attacking!");

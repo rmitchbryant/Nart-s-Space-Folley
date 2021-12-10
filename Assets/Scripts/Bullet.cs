@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script contains logic for the players bullet
+
 public class Bullet : MonoBehaviour
 {
 
@@ -12,11 +14,13 @@ public class Bullet : MonoBehaviour
         EnemyController enemy = other.GetComponent<EnemyController>();
         if (enemy != null)
         {
+            // Cause damage to the enemy
             enemy.TakeDamage(damage);
         }
         EnemyTurretController turret = other.GetComponent<EnemyTurretController>();
         if (turret != null)
         {
+            // In case the enemy is a turret
             turret.TakeDamage(damage);
         }
 
@@ -25,7 +29,8 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.x > 100 || transform.position.x < -100 || transform.position.z > 100 || transform.position.z < -100)
+        // Destroy the bullet if it happens to go to far
+        if (transform.position.x > 200 || transform.position.x < -200 || transform.position.z > 200 || transform.position.z < -200)
         {
             Destroy(gameObject);
         }

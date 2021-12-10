@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This handles the shooting for the non-burst turret
+
 public class EnemyRangeAttack : MonoBehaviour
 {
 
@@ -13,6 +15,7 @@ public class EnemyRangeAttack : MonoBehaviour
 
     public void Shoot(int alternateBarrels)
     {
+        // Determine with barrel will be shooting
         if (alternateBarrels > 0)
         {
 

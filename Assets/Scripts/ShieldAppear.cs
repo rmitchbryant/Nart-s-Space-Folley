@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script enables the invulnerable shield when the power up is picked up
+
 public class ShieldAppear : MonoBehaviour
 {
 

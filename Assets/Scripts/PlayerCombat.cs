@@ -84,9 +84,9 @@ public class PlayerCombat : MonoBehaviour
     // Count damage to the player
     public void PlayerDamaged(int damage)
     {
+        // Determine if the player is invulnerable
         if (!invulnerable)
         {
-
 
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
@@ -96,6 +96,7 @@ public class PlayerCombat : MonoBehaviour
                 //FindObjectOfType<AudioManager>().Play("Hit");
             }
 
+            // Let the player die if health drops to 0
             if (currentHealth <= 0)
             {
                 PlayerDie();
@@ -110,15 +111,17 @@ public class PlayerCombat : MonoBehaviour
 
         playerDead = true;
 
-        //FindObjectOfType<AudioManager>().Play("Death");
+        FindObjectOfType<AudioManager>().Play("Player Death");
 
         animator.Play("Die");
 
+        // Prevent the player from moving after dead
         GetComponent<CharacterController>().enabled = false;
         GetComponent<ThirdPersonMovement>().enabled = false;
         GetComponentInChildren<PlayerLookDirection>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
 
+        // Display the game over screen
         gameOver.SetUp();
 
 

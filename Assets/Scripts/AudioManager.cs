@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-
+        // Have the audio manager persist through the game, but only one instance
         if (instance == null)
         {
             instance = this;
@@ -50,7 +50,6 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Sound " + name + " was not found.");
             return;
         }
-        Debug.Log("Playing sound " + name + ".");
         s.source.Play();
     }
 }

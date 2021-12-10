@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script handles the enemy bullets to damage the player
+
 public class EnemyBullet : MonoBehaviour
 {
     public int damage = 5;
@@ -11,6 +13,7 @@ public class EnemyBullet : MonoBehaviour
         PlayerCombat player = other.GetComponent<PlayerCombat>();
         if (player != null)
         {
+            // Deal damage to the player
             player.PlayerDamaged(damage);
         }
 
@@ -19,7 +22,8 @@ public class EnemyBullet : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.x > 100 || transform.position.x < -100 || transform.position.z > 100 || transform.position.z < -100)
+        // Destroy the bullet if it gets too far
+        if (transform.position.x > 200 || transform.position.x < -200 || transform.position.z > 200 || transform.position.z < -200)
         {
             Destroy(gameObject);
         }

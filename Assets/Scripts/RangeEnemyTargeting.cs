@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script handles the targeting for ranged enemies (turrets in this case)
+
 public class RangeEnemyTargeting : MonoBehaviour
 {
     GameObject player;
@@ -27,15 +29,18 @@ public class RangeEnemyTargeting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If the player exists and the turret is not dead
         if (player != null && !this.GetComponent<EnemyTurretController>().IsDead())
         {
             float distance = Vector3.Distance(player.transform.position, transform.position);
-
+            
+            // Determine if the player is within the detection radius
             if (distance <= lookRadius)
             {
                 FaceTarget();
                 animator.SetBool("turretShooting", true);
 
+                // Set how frequent the turret can shoot
                 if (Time.time >= nextShootTime)
                 {
                     if (burst != null)
@@ -61,6 +66,7 @@ public class RangeEnemyTargeting : MonoBehaviour
 
     }
 
+    // Make sure to face the player
     void FaceTarget()
     {
         Vector3 direction = (player.transform.position - transform.position).normalized;
@@ -68,6 +74,7 @@ public class RangeEnemyTargeting : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
 
+    // Call up the Burst Shoot method if the turret shoots in bursts
     IEnumerator BurstShoot()
     {
         yield return new WaitForSeconds(shootDelay);
@@ -75,6 +82,7 @@ public class RangeEnemyTargeting : MonoBehaviour
         burst.Shoot();
     }
 
+    // Call the regular shooting method if it doesn't shoot in bursts
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(shootDelay);
@@ -89,6 +97,7 @@ public class RangeEnemyTargeting : MonoBehaviour
         shoot.Shoot(alternateBarrels);
     }
 
+    // Display the range of the detection radius
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;

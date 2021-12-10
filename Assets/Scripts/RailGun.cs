@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// This script handles the RailGun behavior
+
 public class RailGun : MonoBehaviour
 {
 
     public int damage = 50;
     public float range = 100f;
     public Transform firePoint;
-    //public GameObject impactEffect;
     public LineRenderer line;
     public float startWidth = 0.5f;
     public float endWidth = 0.5f;
@@ -20,9 +21,11 @@ public class RailGun : MonoBehaviour
 
     public void Shoot()
     {
+        // Determine if the railgun hits anything
         RaycastHit hit;
         if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, range))
         {
+            // If it hits an enemy, deal damage
             EnemyController enemy = hit.transform.GetComponent<EnemyController>();
             if (enemy != null)
             {
@@ -33,19 +36,17 @@ public class RailGun : MonoBehaviour
             {
                 turret.TakeDamage(damage);
             }
-            Debug.Log(hit.transform.name);
 
-            //Instantiate(impactEffect, hit.point, Quaternion.identity);
-
+            // Determine the size of the railgun effect
             line.startWidth = startWidth;
             line.endWidth = endWidth;
 
             line.SetPosition(0, firePoint.position);
-            //line.SetPosition(1, firePoint.position + firePoint.forward * 100);
             line.SetPosition(1, hit.point);
         }
         else
         {
+            // Determine the size of the railgun does not hit anything
             line.startWidth = startWidth;
             line.endWidth = endWidth;
 
@@ -57,6 +58,7 @@ public class RailGun : MonoBehaviour
 
     }
 
+    // Determine how long the line appears
     IEnumerator lineWait()
     {
         line.enabled = true;

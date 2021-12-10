@@ -11,12 +11,15 @@ public class Sound
 
     public AudioClip clip;
 
+    // Give volume control
     [Range(0f, 1f)]
     public float volume;
 
+    // Give pitch control
     [Range(0.1f, 3f)]
     public float pitch;
 
+    // Allow looping
     public bool loop;
 
     [HideInInspector]

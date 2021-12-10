@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script handles the Players range attack
+
 public class RangeAttack : MonoBehaviour
 {
 
@@ -28,12 +30,14 @@ public class RangeAttack : MonoBehaviour
 
     public void Shoot()
     {
+        // If the gun has ammo, allow the player to shoot
         if (ammo > 0)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             rb.AddForce(firePoint.forward * bulletForce, ForceMode.Impulse);
 
+            // If the ammo is low play a different pitched sound
             if (ammo < 6)
             {
                 FindObjectOfType<AudioManager>().Play("Shoot");
@@ -43,20 +47,16 @@ public class RangeAttack : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Shoot Low");
             }
 
+            // Reduce the ammo in the clip (if not infinite)
             if (!infiniteAmmo)
             {
                 ammo -= 1;
                 ammoClip.Ammo(ammo.ToString());
             }
         }
-        //else if (ammo == 0)
-        //{
-        //    ammo -= 1;
-        //    StartCoroutine(Reload());
-
-        //}
     }
 
+    // Reload the clip
     public void Reload()
     {
         if (ammo == fullClip)
@@ -103,11 +103,14 @@ public class RangeAttack : MonoBehaviour
 
     IEnumerator Reloading()
     {
+        // Start the reload animation
         animator.Play("Reload");
         FindObjectOfType<AudioManager>().Play("Reload");
         reloadText.Show();
         reloading = true;
         yield return new WaitForSeconds(reloadTime);
+
+        // After a set amount of time have the gun effectively reloaded
         ammo = fullClip;
         ammoClip.Ammo(ammo.ToString());
         reloadText.Disappear();

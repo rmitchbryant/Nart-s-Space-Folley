@@ -94,8 +94,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 NotWalkShooting();
             }
 
-            //Debug.Log("x = " + moveDir.x + ", y = " + moveDir.y + ", z = " + moveDir.z);
-
+            // This was used to apply a dash effect
             //if (Time.time >= nextDashTime)
             //{
             //    if (Input.GetButtonDown("Jump"))

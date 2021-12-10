@@ -314,7 +314,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 45
+  m_SlopeLimit: 0
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -371,9 +371,7 @@ MonoBehaviour:
   firePoint: {fileID: 7246517062694180466}
   bulletPrefab: {fileID: 1388175975279815573, guid: 680446a5bd7f5e04db0a5ef78337996c,
     type: 3}
-  animator: {fileID: 0}
   reloadText: {fileID: 0}
-  soundEffect: {fileID: 0}
   ammoClip: {fileID: 0}
   bulletForce: 30
   reloading: 0

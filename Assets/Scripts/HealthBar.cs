@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// This script controls the player's health bar
+
 public class HealthBar : MonoBehaviour
 {
 
@@ -10,6 +12,7 @@ public class HealthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
+    // Set the maximum health for the player
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;
@@ -19,6 +22,7 @@ public class HealthBar : MonoBehaviour
 
     }
 
+    // Display the current health
     public void SetHealth(int health)
     {
         slider.value = health;

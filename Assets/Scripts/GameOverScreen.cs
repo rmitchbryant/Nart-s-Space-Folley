@@ -13,11 +13,13 @@ public class GameOverScreen : MonoBehaviour
         gameObject.SetActive(true);
     }
 
+    // Allow the player to restart the level
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    // Allow the player to go back to the Main Menu
     public void ReturnMainMenu()
     {
         SceneManager.LoadScene(0);

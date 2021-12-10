@@ -62,17 +62,22 @@ public class PlayerLookDirection : MonoBehaviour
         {
             railGunText.Disappear();
 
+            // Shoot when the player pressed the right button
             if (Input.GetMouseButtonDown(1) && !player.IsDead())
             {
                 Look();
                 railgunRecharge = false;
                 animator.Play("Shoot_SingleShot_AR");
+                FindObjectOfType<AudioManager>().Play("Shoot RailGun");
                 gameObject.GetComponent<RailGun>().Shoot();
+
+                // Display the recharging of the Railgun on the HUD
                 StartCoroutine(railGunPercentage(railgunRate));
                 railGunText.Show();
             }
         }
 
+        // Have the player reload
         if (Input.GetKeyDown("r"))
         {
             reloading.Reload();

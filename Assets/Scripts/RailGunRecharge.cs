@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// This script displays the number percentage of the railgun's recharge
+
 public class RailGunRecharge : MonoBehaviour
 {
     public Text text;

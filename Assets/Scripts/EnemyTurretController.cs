@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script handles the health and death of the turret enemies
+
 public class EnemyTurretController : MonoBehaviour
 {
 
@@ -23,6 +25,7 @@ public class EnemyTurretController : MonoBehaviour
 
     }
 
+    // Handle taking damage and determine if it dies
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -38,7 +41,7 @@ public class EnemyTurretController : MonoBehaviour
 
     IEnumerator Die()
     {
-
+        // Play an explosion and sound
         Instantiate(explosion, transform.position, transform.rotation);
         FindObjectOfType<AudioManager>().Play("Explosion");
 
