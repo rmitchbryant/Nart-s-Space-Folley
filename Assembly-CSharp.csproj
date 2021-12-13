@@ -67,47 +67,47 @@
     <Compile Include="Assets\Fx Explosion Pack\Script\csMouseOrbit.cs" />
     <Compile Include="Assets\LB3D\CrabMonster\LB3DGameManager.cs" />
     <Compile Include="Assets\LB3D\CrabMonster\Scripts\Rikayon.cs" />
-    <Compile Include="Assets\Scripts\AmmoClip.cs" />
-    <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\BuffText.cs" />
-    <Compile Include="Assets\Scripts\BuffUI.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
-    <Compile Include="Assets\Scripts\BurstRangeAttack.cs" />
-    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
-    <Compile Include="Assets\Scripts\EnemyBullet.cs" />
-    <Compile Include="Assets\Scripts\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\EnemyHUDBillboard.cs" />
-    <Compile Include="Assets\Scripts\EnemyRangeAttack.cs" />
-    <Compile Include="Assets\Scripts\EnemyTurretController.cs" />
-    <Compile Include="Assets\Scripts\GameOverScreen.cs" />
-    <Compile Include="Assets\Scripts\HealthBar.cs" />
-    <Compile Include="Assets\Scripts\HealthRestore.cs" />
-    <Compile Include="Assets\Scripts\InfiniteAmmoEffect.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\MeleeEnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\MeleeEnemyStrike.cs" />
-    <Compile Include="Assets\Scripts\PlayerCombat.cs" />
-    <Compile Include="Assets\Scripts\PlayerLookDirection.cs" />
-    <Compile Include="Assets\Scripts\PowerUpInfiniteAmmo.cs" />
-    <Compile Include="Assets\Scripts\PowerUpInvulnerable.cs" />
-    <Compile Include="Assets\Scripts\RailGun.cs" />
-    <Compile Include="Assets\Scripts\RailGunRecharge.cs" />
-    <Compile Include="Assets\Scripts\RailGunText.cs" />
-    <Compile Include="Assets\Scripts\RangeAttack.cs" />
-    <Compile Include="Assets\Scripts\RangeEnemyTargeting.cs" />
-    <Compile Include="Assets\Scripts\ReloadText.cs" />
-    <Compile Include="Assets\Scripts\ShieldAppear.cs" />
-    <Compile Include="Assets\Scripts\ShipItemsDisplay.cs" />
-    <Compile Include="Assets\Scripts\ShipItemsPart1.cs" />
-    <Compile Include="Assets\Scripts\ShipItemsPart2.cs" />
-    <Compile Include="Assets\Scripts\ShipItemsPickup.cs" />
-    <Compile Include="Assets\Scripts\Sound.cs" />
-    <Compile Include="Assets\Scripts\SpawnEnemyMessage.cs" />
-    <Compile Include="Assets\Scripts\SpawnPoint.cs" />
-    <Compile Include="Assets\Scripts\SpinningObject.cs" />
-    <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
-    <Compile Include="Assets\Scripts\ToNextLevel.cs" />
-    <Compile Include="Assets\Scripts\VictoryScreen.cs" />
+    <Compile Include="Assets\My Scripts\AmmoClip.cs" />
+    <Compile Include="Assets\My Scripts\AudioManager.cs" />
+    <Compile Include="Assets\My Scripts\BuffText.cs" />
+    <Compile Include="Assets\My Scripts\BuffUI.cs" />
+    <Compile Include="Assets\My Scripts\Bullet.cs" />
+    <Compile Include="Assets\My Scripts\BurstRangeAttack.cs" />
+    <Compile Include="Assets\My Scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\My Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\My Scripts\EnemyController.cs" />
+    <Compile Include="Assets\My Scripts\EnemyHUDBillboard.cs" />
+    <Compile Include="Assets\My Scripts\EnemyRangeAttack.cs" />
+    <Compile Include="Assets\My Scripts\EnemyTurretController.cs" />
+    <Compile Include="Assets\My Scripts\GameOverScreen.cs" />
+    <Compile Include="Assets\My Scripts\HealthBar.cs" />
+    <Compile Include="Assets\My Scripts\HealthRestore.cs" />
+    <Compile Include="Assets\My Scripts\InfiniteAmmoEffect.cs" />
+    <Compile Include="Assets\My Scripts\MainMenu.cs" />
+    <Compile Include="Assets\My Scripts\MeleeEnemyMovement.cs" />
+    <Compile Include="Assets\My Scripts\MeleeEnemyStrike.cs" />
+    <Compile Include="Assets\My Scripts\PlayerCombat.cs" />
+    <Compile Include="Assets\My Scripts\PlayerLookDirection.cs" />
+    <Compile Include="Assets\My Scripts\PowerUpInfiniteAmmo.cs" />
+    <Compile Include="Assets\My Scripts\PowerUpInvulnerable.cs" />
+    <Compile Include="Assets\My Scripts\RailGun.cs" />
+    <Compile Include="Assets\My Scripts\RailGunRecharge.cs" />
+    <Compile Include="Assets\My Scripts\RailGunText.cs" />
+    <Compile Include="Assets\My Scripts\RangeAttack.cs" />
+    <Compile Include="Assets\My Scripts\RangeEnemyTargeting.cs" />
+    <Compile Include="Assets\My Scripts\ReloadText.cs" />
+    <Compile Include="Assets\My Scripts\ShieldAppear.cs" />
+    <Compile Include="Assets\My Scripts\ShipItemsDisplay.cs" />
+    <Compile Include="Assets\My Scripts\ShipItemsPart1.cs" />
+    <Compile Include="Assets\My Scripts\ShipItemsPart2.cs" />
+    <Compile Include="Assets\My Scripts\ShipItemsPickup.cs" />
+    <Compile Include="Assets\My Scripts\Sound.cs" />
+    <Compile Include="Assets\My Scripts\SpawnEnemyMessage.cs" />
+    <Compile Include="Assets\My Scripts\SpawnPoint.cs" />
+    <Compile Include="Assets\My Scripts\SpinningObject.cs" />
+    <Compile Include="Assets\My Scripts\ThirdPersonMovement.cs" />
+    <Compile Include="Assets\My Scripts\ToNextLevel.cs" />
+    <Compile Include="Assets\My Scripts\VictoryScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -701,6 +701,9 @@
     <Reference Include="Cinemachine">
       <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -712,6 +715,9 @@
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
       <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -739,12 +745,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids">
-      <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>D:/Unity Projects/Nart's Space Folley/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

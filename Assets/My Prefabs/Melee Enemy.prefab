@@ -154,7 +154,7 @@ MonoBehaviour:
   deathDelay: 2
   healthBar: {fileID: 3700634111881605654}
   animator: {fileID: 0}
-  drop: {fileID: 0}
+  drop: {fileID: 5605509152042765066, guid: e53bb9359d75c6c418c84123358d11b3, type: 3}
 --- !u!1 &3700634111881605652
 GameObject:
   m_ObjectHideFlags: 0

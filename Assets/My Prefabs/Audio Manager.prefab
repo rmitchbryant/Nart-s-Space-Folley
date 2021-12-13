@@ -134,3 +134,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Music
+    clip: {fileID: 8300000, guid: 0398fa23d540bb042bcd3bed251f12a0, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

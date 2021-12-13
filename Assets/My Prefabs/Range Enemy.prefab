@@ -172,9 +172,8 @@ GameObject:
   - component: {fileID: 7599065013151145736}
   - component: {fileID: 7599065013151145741}
   - component: {fileID: 7599065013151145738}
-  - component: {fileID: 7599065013151145739}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Turret Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,8 +187,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7599065013151145737}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
-  m_LocalScale: {x: 0.85, y: 1, z: 0.85}
+  m_LocalPosition: {x: 0, y: -1.1, z: 0}
+  m_LocalScale: {x: 0.85, y: 0.6, z: 0.85}
   m_Children: []
   m_Father: {fileID: 7599065013683183727}
   m_RootOrder: 4
@@ -220,7 +219,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0b6deebcc53d0854c9c741b05a70ee07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,20 +240,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7599065013151145739
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7599065013151145737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &7599065013493341014
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,10 +281,10 @@ GameObject:
   - component: {fileID: 7599065013683183727}
   - component: {fileID: 7599065013683183724}
   - component: {fileID: 7599065013683183725}
-  - component: {fileID: 7599065013683183722}
   - component: {fileID: 7599065013683183720}
   - component: {fileID: 7599065013683183721}
   - component: {fileID: 5939212623802342956}
+  - component: {fileID: 1254246747898303101}
   m_Layer: 0
   m_Name: Range Enemy
   m_TagString: Untagged
@@ -373,19 +358,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &7599065013683183722
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7599065013683183718}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.65325403
-  m_Center: {x: 0, y: -0.15325403, z: 0}
 --- !u!114 &7599065013683183720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68e3dad135928b4fab8a8a55f7771c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
+  lookRadius: 20
   nextShootTime: 0
   rateOfFire: 2
   shootDelay: 1
@@ -437,6 +409,19 @@ MonoBehaviour:
   deathDelay: 0
   healthBar: {fileID: 7599065012848706817}
   explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 3}
+--- !u!65 &1254246747898303101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7599065013683183718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.065795, z: 1}
+  m_Center: {x: 0, y: -0.5328975, z: 0}
 --- !u!1 &7599065014223573927
 GameObject:
   m_ObjectHideFlags: 0
